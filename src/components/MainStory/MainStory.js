@@ -1,14 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const MainStory = ({
-  id,
-  title,
-  image,
-  location,
-  abstract,
-  ...delegated
-}) => {
+const MainStory = ({ id, title, image, location, abstract, ...delegated }) => {
   return (
     <Wrapper {...delegated}>
       <a href={`/story/${id}`}>
@@ -18,7 +11,7 @@ const MainStory = ({
       <Abstract>
         <Location>{location}</Location> — {abstract}
       </Abstract>
-      <ReadMore href="/story">Continue Reading…</ReadMore>
+      <ReadMore href='/story'>Continue Reading…</ReadMore>
     </Wrapper>
   );
 };
